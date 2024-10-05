@@ -32,6 +32,7 @@ func add(c *gin.Context) {
 	}
 	c.JSON(200, gin.H{"msg": "ok"})
 }
+
 func validErr(err error) error {
 	errs, ok := err.(validator.ValidationErrors)
 	if !ok {
